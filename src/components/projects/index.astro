@@ -1,0 +1,34 @@
+---
+import Card from "./card.astro";
+
+const projects = [
+  {
+    title: "Aquifiestas",
+    description: "Pagina web para alquiler de fiestas, con sistema inventario",
+    image: "/images/alquifiestas/landing_page.jpeg",
+    demo: "https://alquifiestas-demo.vercel.app/en",
+    tecnologies: ["Nextjs", "TailwindCSS", "TypeScript"],
+  },
+  {
+    title: "Tiendita",
+    description: "Sistema de inventario para una tienda de abarrotes",
+    image: "/images/tiendita/shopping-cart.jpg",
+    demo: "https://github.com/SevenPok/Tienda",
+    tecnologies: ["Java"],
+    githubUrl: "https://github.com/SevenPok/Tienda",
+  },
+];
+---
+
+<section class="scroll-mt-20 mt-20" id="projects">
+  <div class="flex flex-col items-center text-center mb-12">
+    <h1 class="text-5xl font-bold text-center mb-8">Mis Proyectos</h1>
+    <p class="text-muted-foreground max-w-2xl">
+      Aquí encontrarás una selección de mis proyectos más destacados. Cada proyecto representa diferentes habilidades y
+      tecnologías que he dominado a lo largo de mi carrera.
+    </p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+    {projects.map((project) => <Card {...project} />)}
+  </div>
+</section>
