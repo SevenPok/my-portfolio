@@ -1,48 +1,68 @@
-# Astro Starter Kit: Basics
+# Portfolio Personal
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+Mi portfolio personal desarrollado con Astro, React y TypeScript, mostrando mis proyectos, habilidades y experiencia profesional.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🚀 Características
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- **Diseño Responsive**: Se adapta a cualquier dispositivo.
+- **Modo oscuro/claro**: Cambia entre temas según tu preferencia.
+- **Optimizado para SEO**: Estructura y metadatos que favorecen el posicionamiento.
+- **Rápido**: Gracias a la arquitectura de Astro con hidratación parcial.
+- **Docker**: Implementación sencilla mediante contenedores.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 🛠️ Tecnologías Utilizadas
 
-## 🚀 Project Structure
+- **[Astro](https://astro.build/)**: Framework web para sitios orientados a contenido
+- **React**: Componentes interactivos
+- **TypeScript**: Seguridad de tipos
+- **CSS**: Estilos personalizados
 
-Inside of your Astro project, you'll see the following folders and files:
+## 📁 Estructura del Proyecto
 
 ```text
 /
 ├── public/
-│   └── favicon.svg
+│   ├── documents/     # CV y otros documentos
+│   └── images/        # Imágenes de perfil y proyectos
 ├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/    # Componentes modulares
+│   │   ├── experience/
+│   │   ├── footer/
+│   │   ├── navbar/
+│   │   └── projects/
+│   ├── layouts/       # Estructura principal
+│   ├── pages/         # Rutas de la aplicación
+│   └── styles/        # Estilos globales
+└── dockerfile         # Configuración para despliegue con Docker
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🧞 Comandos
 
-## 🧞 Commands
+Todos los comandos se ejecutan desde la raíz del proyecto:
 
-All commands are run from the root of the project, from a terminal:
+| Comando               | Acción                                              |
+| :-------------------- | :-------------------------------------------------- |
+| `pnpm install`        | Instala las dependencias                            |
+| `pnpm dev`            | Inicia servidor de desarrollo en `localhost:4321`   |
+| `pnpm build`          | Construye el sitio para producción en `./dist/`     |
+| `pnpm preview`        | Vista previa de la build antes de desplegar         |
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+## 🐳 Despliegue con Docker
 
-## 👀 Want to learn more?
+Para desplegar la aplicación utilizando Docker:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```bash
+# Construir la imagen
+docker build -t portfolio-gerber .
+
+# Ejecutar el contenedor
+docker run -p 8080:80 portfolio-gerber
+```
+
+## 📝 Licencia
+
+Este proyecto está bajo licencia [MIT](LICENSE).
+
+---
+
+© 2025 Gerber Colindres | Desarrollador Web
