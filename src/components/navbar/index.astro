@@ -89,15 +89,16 @@ const menuItems = [
 </nav>
 
 <script>
+  import { $, $$ } from "@/lib/dom-selector";
   // Script para manejar el sidebar móvil
   document.addEventListener("DOMContentLoaded", () => {
-    const mobileMenuButton = document.getElementById("mobile-menu-button") as HTMLButtonElement | null;
-    const closeSidebarButton = document.getElementById("close-sidebar") as HTMLButtonElement | null;
-    const sidebar = document.getElementById("mobile-sidebar") as HTMLDivElement | null;
-    const overlay = document.getElementById("sidebar-overlay") as HTMLDivElement | null;
-    const menuLinks = sidebar?.querySelectorAll<HTMLAnchorElement>('a[href^="#"]') || [];
-    const sidebarThemeToggle = document.getElementById("sidebar-theme-toggle") as HTMLDivElement | null;
-    const mainThemeToggle = document.getElementById("theme-toggle") as HTMLDivElement | null;
+    const mobileMenuButton = $("#mobile-menu-button");
+    const closeSidebarButton = $("#close-sidebar");
+    const sidebar = $("#mobile-sidebar");
+    const overlay = $("#sidebar-overlay");
+    const menuLinks = $$('a[href^="#"]') || [];
+    const sidebarThemeToggle = $("#sidebar-theme-toggle");
+    const mainThemeToggle = $("#theme-toggle");
 
     // Función para abrir el sidebar
     const openSidebar = () => {
