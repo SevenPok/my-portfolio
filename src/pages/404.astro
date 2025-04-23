@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <main class="min-h-screen flex items-center justify-center px-4">
+    <div class="max-w-4xl mx-auto text-center py-16">
+      <h1 class="text-9xl font-bold text-blue-600 dark:text-blue-400 mb-4">404</h1>
+      <div class="relative mb-8">
+        <div class="absolute top-1/2 left-0 w-full h-0.5 bg-gray-300 dark:bg-gray-700"></div>
+        <span class="relative bg-gray-100 dark:bg-gray-900 px-6 text-lg text-gray-600 dark:text-gray-400 font-semibold">
+          Página no encontrada
+        </span>
+      </div>
+      <p class="text-xl text-gray-700 dark:text-gray-300 mb-8">
+        Lo sentimos, la página que estás buscando no existe o ha sido movida.
+      </p>
+      
+      <div class="flex justify-center mb-12">
+        <div class="w-64 h-64">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" class="w-full h-full">
+            <g class="astronaut">
+              <circle cx="250" cy="250" r="120" fill="none" stroke="currentColor" stroke-width="4" class="text-blue-500 dark:text-blue-400" />
+              <path d="M280,280 L310,340 M220,280 L190,340" stroke="currentColor" stroke-width="4" class="text-blue-600 dark:text-blue-300" />
+              <circle cx="250" cy="220" r="50" fill="currentColor" class="text-gray-200 dark:text-gray-700" />
+              <circle cx="230" cy="210" r="8" fill="currentColor" class="text-gray-800 dark:text-gray-300" />
+              <circle cx="270" cy="210" r="8" fill="currentColor" class="text-gray-800 dark:text-gray-300" />
+              <path d="M240,235 Q250,245 260,235" stroke="currentColor" stroke-width="3" fill="none" class="text-gray-800 dark:text-gray-300" />
+            </g>
+          </svg>
+        </div>
+      </div>
+      
+      <a 
+        href="/" 
+        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h2a1 1 0 001-1v-7a1 1 0 00-.293-.707l-5-5a1 1 0 00-1.414 0l-5 5A1 1 0 003 10v7a1 1 0 001 1h2a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3"/>
+        </svg>
+        Volver al inicio
+      </a>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .astronaut {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+</style>
