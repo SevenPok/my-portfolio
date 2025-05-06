@@ -9,42 +9,40 @@ const menuItems = [
 ];
 ---
 
-<nav class="w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 shadow-sm fixed top-0">
-  <div class="container mx-auto px-4">
-    <div class="flex items-center justify-between h-16">
-      <!-- Logo -->
-      <a href="#about" class="text-xl font-bold text-gray-800 dark:text-white"> Gerber Colindres </a>
+<nav class="w-full bg-secondary-light/80 dark:bg-gray-900/80 backdrop-blur-md z-50 shadow-sm fixed top-0">
+  <div class="flex justify-between items-center w-full max-w-6xl mx-auto px-4 py-2 lg:px-8 h-16">
+    <!-- Logo -->
+    <a href="#about" class="text-xl font-bold text-gray-800 dark:text-white">Gerber Colindres</a>
 
-      <!-- Menú desktop -->
-      <div class="hidden lg:flex space-x-8">
-        {
-          menuItems.map((item) => (
-            <a
-              href={`#${item.id}`}
-              class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-              data-id={item.id}
-            >
-              {item.name}
-            </a>
-          ))
-        }
-      </div>
+    <!-- Menú desktop -->
+    <div class="hidden lg:flex space-x-8">
+      {
+        menuItems.map((item) => (
+          <a
+            href={`#${item.id}`}
+            class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+            data-id={item.id}
+          >
+            {item.name}
+          </a>
+        ))
+      }
+    </div>
 
-      <!-- Menu mobil -->
-      <div class="flex items-center space-x-4">
-        <div
-          id="theme-toggle"
-          class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer"
-        >
-          <ToggleTheme />
-        </div>
-        <!-- Botón móvil -->
-        <button id="mobile-menu-button" class="lg:hidden p-2 text-gray-600 dark:text-gray-300" aria-label="Abrir menú">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
+    <!-- Menu mobil -->
+    <div class="flex items-center">
+      <div
+        id="theme-toggle"
+        class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer"
+      >
+        <ToggleTheme />
       </div>
+      <!-- Botón móvil -->
+      <button id="mobile-menu-button" class="lg:hidden p-2 text-gray-600 dark:text-gray-300" aria-label="Abrir menú">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
     </div>
   </div>
 
@@ -57,7 +55,7 @@ const menuItems = [
     class="fixed top-0 left-0 w-full sm:w-2/4 md:w-2/5 h-screen bg-white dark:bg-gray-900 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out z-50 lg:hidden flex flex-col"
   >
     <div class="flex justify-between items-center p-5 border-b dark:border-gray-700">
-      <span class="text-xl font-bold text-gray-800 dark:text-white"> Gerber Colindres </span>
+      <span class="text-xl font-bold text-gray-800 dark:text-white">Gerber Colindres</span>
       <button
         id="close-sidebar"
         class="p-2 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"

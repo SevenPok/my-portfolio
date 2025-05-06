@@ -1,0 +1,97 @@
+---
+import { Image } from "astro:assets";
+import Sprite from "@/assets/sprite.svg?url";
+---
+
+<section id="about" class="flex flex-col justify-center items-center scroll-mt-24">
+  <div class="flex flex-col justify-center items-center max-w-4xl">
+    <Image
+      src="/images/gerber-colindres.webp"
+      alt="Gerber Colindres"
+      class="size-56 md:size-64 lg:size-72 object-cover mb-4 rounded-full border-8 border-secondary-light/80 dark:border-gray-800/80 shadow-lg"
+      width={128}
+      height={128}
+      loading="eager"
+    />
+    <span
+      class="text-sky-400 text-xl
+      font-mono px-3 py-1
+      border border-sky-500/50 rounded-full flex items-center justify-center shadow-sm
+      bg-black/65
+      cursor-crosshair
+      z-10"
+    >
+      @sevenpok
+      <svg class="ml-1 w-5 h-5 text-sky-400 inline" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707a1 1 0 00-1.414-1.414L9 11.172l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </span>
+    <h1 class="text-4xl font-extrabold leading-tight font-display mt-2">Gerber Colindres</h1>
+    <div class="flex flex-row items-center text-center gap-4 mt-4">
+      <!-- Github -->
+      <a
+        class="bg-zinc-900 dark:bg-zinc-950 rounded-full p-2 transition-all duration-300 transform hover:scale-110 shadow-lg"
+        href="https: github.com sevenpok"
+        target="_blank"
+        aria-label="GitHub"
+        title="Ir a GitHub de @sevepok"
+      >
+        <svg class="size-9">
+          <use xlink:href={Sprite + "#github"}></use>
+        </svg>
+      </a>
+      <!-- Linkendn -->
+      <a
+        class="bg-white rounded-full p-3 transition-all duration-300 transform hover:scale-110 shadow-lg"
+        href="https://linkedin.com/in/gerber-colindres"
+        target="_blank"
+        aria-label="LinkedIn"
+        title="Ir a LinkedIn de @gerber-colindres"
+      >
+        <svg class="size-7">
+          <use xlink:href={Sprite + "#linkedin"}></use>
+        </svg>
+      </a>
+      <!-- CV -->
+      <a
+        class="bg-white rounded-full p-2 transition-all duration-300 transform hover:scale-110 shadow-lg"
+        href="/documents/gerber-colindres-cv-es.pdf"
+        target="_blank"
+        download="gerber-colindres.pdf"
+        aria-label="CV"
+        title="Descargar CV de Gerber Colindres"
+      >
+        <svg class="size-9" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+          ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+            <path
+              d="M12 3V16M12 16L16 11.625M12 16L8 11.625"
+              stroke="#1C274C"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M15 21H9C6.17157 21 4.75736 21 3.87868 20.1213C3 19.2426 3 17.8284 3 15M21 15C21 17.8284 21 19.2426 20.1213 20.1213C19.8215 20.4211 19.4594 20.6186 19 20.7487"
+              stroke="#1C274C"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </g></svg
+        >
+      </a>
+    </div>
+    <p class="text-center mt-4 text-balance">
+      ¡Hola! Soy <strong class="text-blue-600 dark:text-blue-400">Gerber Colindres</strong>, desarrollador de software
+      guatemalteco con más de
+      <span class="font-semibold dark:text-gray-200">tres años</span>
+      de experiencia profesional. Mi pasión es crear soluciones tecnológicas
+      <span class="italic text-gray-700 dark:text-gray-400">eficientes e innovadoras</span>
+      que impacten positivamente.
+    </p>
+  </div>
+</section>

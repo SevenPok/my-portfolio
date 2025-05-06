@@ -1,9 +1,12 @@
-<button
-  id="theme-toggle"
-  class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer"
->
+<button id="theme-toggle" class="p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer group">
   <!-- Icono Luna (Modo Oscuro) -->
-  <svg class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  <svg
+    class="w-4 h-4 hidden dark:block group-hover:text-blue-400"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+  >
     <path
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -12,7 +15,13 @@
   </svg>
 
   <!-- Icono Sol (Modo Claro) -->
-  <svg class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  <svg
+    class="w-4 h-4 block dark:hidden group-hover:text-blue-600"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+  >
     <path
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -25,7 +34,7 @@
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const savedTheme = localStorage.getItem("theme");
-    const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const systemDark = window.matchMedia("(prefers-color-scheme: light)").matches;
 
     // Prioridad: localStorage > preferencia sistema
     const initialTheme = savedTheme || (systemDark ? "dark" : "light");
