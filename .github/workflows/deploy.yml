@@ -3,7 +3,7 @@ name: Deploy Astro Site to GitHub Pages
 on:
   # Trigger el workflow cada vez que hay un push a la rama main
   push:
-    branches: [ main ]
+    branches: [main]
   # Permite ejecutar este workflow manualmente desde la pestaña Actions en GitHub
   workflow_dispatch:
 
@@ -20,36 +20,36 @@ concurrency:
 
 jobs:
   build:
-    name: Build
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [22]
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v2
+      - uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
         with:
-          version: 8
-      
-      - name: Setup Node.js
+          version: 10
+
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: 'pnpm'
-      
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
+
       - name: Install dependencies
         run: pnpm install
 
       - name: Build Astro site
         run: pnpm build
-      
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: "./dist"
 
   deploy:
     environment:
