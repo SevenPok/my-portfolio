@@ -26,11 +26,14 @@ Mi portfolio personal desarrollado con Astro, React y TypeScript, mostrando mis 
 │   └── images/        # Imágenes de perfil y proyectos
 ├── src/
 │   ├── components/    # Componentes modulares
+|   |   ├── about/
 │   │   ├── experience/
 │   │   ├── footer/
 │   │   ├── navbar/
-│   │   └── projects/
+|   |   ├── projects/
+│   │   └── skills/
 │   ├── layouts/       # Estructura principal
+|   ├── lib/           # Funciones de utilidad
 │   ├── pages/         # Rutas de la aplicación
 │   └── styles/        # Estilos globales
 └── dockerfile         # Configuración para despliegue con Docker
@@ -45,7 +48,6 @@ Todos los comandos se ejecutan desde la raíz del proyecto:
 | `pnpm install`        | Instala las dependencias                            |
 | `pnpm dev`            | Inicia servidor de desarrollo en `localhost:4321`   |
 | `pnpm build`          | Construye el sitio para producción en `./dist/`     |
-| `pnpm preview`        | Vista previa de la build antes de desplegar         |
 
 ## 🐳 Despliegue con Docker
 

@@ -2,7 +2,23 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/inter.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+}
+
+@layer base {
+  p {
+    margin-block: 1lh;
+  }
+}
+
 @theme {
   --color-light: #ede7de;
   --color-secondary-light: #f0f0ea;
+
+  --font-sans: "Inter", system-ui, sans-serif;
 }
