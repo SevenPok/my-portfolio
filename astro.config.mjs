@@ -10,5 +10,9 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  build: {
+    assetsPrefix: ".",
+  },
   integrations: [react()],
+  srcDir: "./src",
 });
