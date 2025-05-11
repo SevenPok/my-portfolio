@@ -12,11 +12,4 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   integrations: [react()],
-  root: "./",
-  outDir: "./dist",
-  publicDir: "./public",
-  srcDir: "./src",
-  build: {
-    assets: "astro",
-  },
 });
