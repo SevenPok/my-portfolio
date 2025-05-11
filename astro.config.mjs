@@ -10,9 +10,9 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  build: {
-    assetsPrefix: ".",
-  },
   integrations: [react()],
+  root: "./",
+  outDir: "./dist",
+  publicDir: "./public",
   srcDir: "./src",
 });
