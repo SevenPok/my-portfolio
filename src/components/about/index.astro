@@ -4,14 +4,29 @@ import Sprite from "@/assets/sprite.svg?url";
 
 <section id="about" class="flex flex-col justify-center items-center scroll-mt-24">
   <div class="flex flex-col justify-center items-center max-w-4xl">
-    <img
-      src="/images/gerber-colindres.webp"
-      alt="Gerber Colindres"
-      class="size-56 md:size-64 lg:size-72 object-cover mb-4 rounded-full border-8 border-secondary-light/80 dark:border-gray-800/80 shadow-lg"
-      width={128}
-      height={128}
-      loading="eager"
-    />
+    <div class="flip-container group relative size-56 md:size-64 lg:size-72 mb-4 rounded-full cursor-pointer">
+      <div class="flip-inner w-full h-full relative rounded-full">
+        <!-- Imagen frontal -->
+        <img
+          src="/images/gerber-colindres.webp"
+          alt="Gerber Colindres"
+          class="flip-front rounded-full border-8 border-secondary-light/80 dark:border-gray-800/80 shadow-lg absolute inset-0 w-full h-full object-cover"
+          width={128}
+          height={128}
+          loading="eager"
+        />
+
+        <!-- Imagen trasera (hover) -->
+        <img
+          src="/images/saber.webp"
+          alt="Gerber Colindres"
+          class="flip-back rounded-full border-8 border-secondary-light/80 dark:border-gray-800/80 shadow-lg absolute inset-0 w-full h-full object-cover"
+          width={128}
+          height={128}
+          loading="eager"
+        />
+      </div>
+    </div>
     <span
       class="text-sky-400 text-xl
       font-mono px-3 py-1
@@ -94,3 +109,28 @@ import Sprite from "@/assets/sprite.svg?url";
     </p>
   </div>
 </section>
+
+<style>
+  .flip-container {
+    perspective: 1000px;
+  }
+
+  .flip-inner {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .group:hover .flip-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-front,
+  .flip-back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .flip-back {
+    transform: rotateY(180deg);
+  }
+</style>
