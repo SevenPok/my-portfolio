@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
   title: string;
   description: string;
@@ -15,7 +17,7 @@ const card = Astro.props;
 <div
   class="rounded-xl overflow-hidden shadow-lg bg-secondary-light dark:bg-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg dark:shadow-none cursor-pointer"
 >
-  <img class="w-full h-72 object-cover" src={card.image} alt={card.title} width={300} height={300} loading="lazy" />
+  <Image class="w-full h-72 object-cover" src={card.image} alt={card.title} width={300} height={300} loading="lazy" />
   <div class="p-6">
     <h2 class="text-2xl font-bold text-gray-900 dark:text-white">{card.title}</h2>
     <p class="text-gray-700 dark:text-gray-300 mt-2">{card.description}</p>
@@ -29,14 +31,14 @@ const card = Astro.props;
       }
     </div>
     <div class="mt-4 flex gap-4">
-      <button
+      <button id="demo-button" name="demo-button" class="px-2"
         ><a href={card.demo} target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline"
           >Ver demo</a
         ></button
       >
       {
         card.githubUrl && (
-          <button>
+          <button id="github-button" name="github-button" class="px-2">
             <a href={card.githubUrl} target="_blank" class="text-gray-600 dark:text-gray-400 hover:underline">
               GitHub
             </a>

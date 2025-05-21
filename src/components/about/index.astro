@@ -1,5 +1,6 @@
 ---
 import Sprite from "@/assets/sprite.svg?url";
+import { Image } from "astro:assets";
 ---
 
 <section id="about" class="flex flex-col justify-center items-center scroll-mt-24">
@@ -7,8 +8,8 @@ import Sprite from "@/assets/sprite.svg?url";
     <div class="flip-container group relative size-56 md:size-64 lg:size-72 mb-4 rounded-full cursor-pointer">
       <div class="flip-inner w-full h-full relative rounded-full">
         <!-- Imagen frontal -->
-        <img
-          src="/images/gerber-colindres.webp"
+        <Image
+          src="/images/gerber_colindres.jpg"
           alt="Gerber Colindres"
           class="flip-front rounded-full border-8 border-secondary-light/80 dark:border-gray-800/80 shadow-lg absolute inset-0 w-full h-full object-cover"
           width={128}
@@ -17,7 +18,7 @@ import Sprite from "@/assets/sprite.svg?url";
         />
 
         <!-- Imagen trasera (hover) -->
-        <img
+        <Image
           src="/images/saber.webp"
           alt="Gerber Colindres"
           class="flip-back rounded-full border-8 border-secondary-light/80 dark:border-gray-800/80 shadow-lg absolute inset-0 w-full h-full object-cover"
