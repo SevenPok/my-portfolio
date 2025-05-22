@@ -1,7 +1,7 @@
 import React from "react";
 import { FaJs, FaNode, FaReact } from "react-icons/fa6";
 import { RiNextjsFill } from "react-icons/ri";
-import { SiNestjs, SiTypescript, SiAstro, SiPython } from "react-icons/si";
+import { SiAstro, SiNestjs, SiPython, SiTypescript } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 import Card from "./card";
 
@@ -64,16 +64,28 @@ const skills = [
 
 export const Skills = () => {
   return (
-    <section className="flex flex-col items-center mt-15 scroll-mt-20" id="skills">
-      <h1 className="text-4xl font-extrabold leading-tight font-display text-center">Habilidades y Tecnologías</h1>
+    <section
+      className="flex flex-col items-center mt-15 scroll-mt-20"
+      id="skills"
+    >
+      <h1 className="text-4xl font-extrabold leading-tight font-display text-center">
+        Habilidades y Tecnologías
+      </h1>
       <p className="text-muted-foreground text-center mb-10 mt-4 text-balance">
-        Aquí hay una lista de las tecnologías y habilidades que he adquirido a lo largo de mi carrera. Cada una de ellas
-        representa un paso en mi viaje como desarrollador. Estoy emocionado por seguir aprendiendo y creciendo en el
-        futuro.
+        Aquí hay una lista de las tecnologías y habilidades que he adquirido a
+        lo largo de mi carrera. Cada una de ellas representa un paso en mi viaje
+        como desarrollador. Estoy emocionado por seguir aprendiendo y creciendo
+        en el futuro.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-4xl">
         {skills.map((skill) => (
-          <Card key={skill.name} name={skill.name} icon={skill.icon} percent={skill.percent} color={skill.color} />
+          <Card
+            key={skill.name}
+            name={skill.name}
+            icon={skill.icon}
+            percent={skill.percent}
+            color={skill.color}
+          />
         ))}
       </div>
     </section>

@@ -9,7 +9,15 @@ interface Props {
   isLast: boolean;
 }
 
-const { title, company, period, description, technologies, isLatest = false, isLast = false } = Astro.props;
+const {
+  title,
+  company,
+  period,
+  description,
+  technologies,
+  isLatest = false,
+  isLast = false,
+} = Astro.props;
 ---
 
 <div class={`experience-card relative pl-8 sm:pl-10 ${isLast ? "pb-0" : "pb-10"}`}>
