@@ -27,7 +27,6 @@
       "recommended": true
     }
   },
-  "extends": [],
   "javascript": {
     "formatter": {
       "quoteStyle": "double",
@@ -37,7 +36,10 @@
       "indentStyle": "space",
       "indentWidth": 2,
       "semicolons": "always",
-      "arrowParentheses": "always"
+      "arrowParentheses": "always",
+      "bracketSpacing": true,
+      "trailingCommas": "none",
+      "lineEnding": "lf"
     }
   },
   "json": {

@@ -21,7 +21,7 @@ const Card = (props: Skill) => {
         >
           {cloneElement(skill.icon, {
             style: { color: skill.color },
-            className: "transition-transform group-hover:scale-110",
+            className: "transition-transform group-hover:scale-110"
           })}
         </div>
         <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
@@ -46,7 +46,7 @@ const Card = (props: Skill) => {
           className="h-2.5 rounded-full transition-all duration-500"
           style={{
             width: `${skill.percent}%`,
-            backgroundColor: skill.color,
+            backgroundColor: skill.color
           }}
         />
       </div>

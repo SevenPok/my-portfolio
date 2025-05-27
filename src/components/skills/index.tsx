@@ -10,56 +10,56 @@ const skills = [
     name: "JavaScript",
     icon: <FaJs className="text-2xl" />,
     percent: 85,
-    color: "#ffcf49",
+    color: "#ffcf49"
   },
   {
     name: "React",
     icon: <FaReact className="text-2xl" />,
     percent: 90,
-    color: "#61DAFB",
+    color: "#61DAFB"
   },
   {
     name: "Node.js",
     icon: <FaNode className="text-2xl" />,
     percent: 80,
-    color: "#8CC84B",
+    color: "#8CC84B"
   },
   {
     name: "TypeScript",
     icon: <SiTypescript className="text-2xl" />,
     percent: 88,
-    color: "#3178C6",
+    color: "#3178C6"
   },
   {
     name: "Next.js",
     icon: <RiNextjsFill className="text-2xl" />,
     percent: 90,
-    color: "#0d1113",
+    color: "#0d1113"
   },
   {
     name: "NestJS",
     icon: <SiNestjs className="text-2xl" />,
     percent: 75,
-    color: "#E0234E",
+    color: "#E0234E"
   },
   {
     name: "C#",
     icon: <TbBrandCSharp className="text-2xl" />,
     percent: 70,
-    color: "#68217A",
+    color: "#68217A"
   },
   {
     name: "Astro",
     icon: <SiAstro className="text-2xl" />,
     percent: 40,
-    color: "#0d1113",
+    color: "#0d1113"
   },
   {
     name: "Python",
     icon: <SiPython className="text-2xl" />,
     percent: 60,
-    color: "#3776AB",
-  },
+    color: "#3776AB"
+  }
 ];
 
 export const Skills = () => {
