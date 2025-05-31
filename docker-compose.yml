@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  astro-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: astro-sitio
+    ports:
+      - "${PORT:-8080}:8080"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    networks:
+      - astro-network
+
+networks:
+  astro-network:
+    driver: bridge
