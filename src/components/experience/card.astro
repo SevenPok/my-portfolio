@@ -9,24 +9,16 @@ interface Props {
   isLast: boolean;
 }
 
-const {
-  title,
-  company,
-  period,
-  description,
-  technologies,
-  isLatest = false,
-  isLast = false
-} = Astro.props;
+const { title, company, period, description, technologies, isLatest = false, isLast = false } = Astro.props;
 ---
 
 <div class={`experience-card relative pl-8 sm:pl-10 ${isLast ? "pb-0" : "pb-10"}`}>
   {/* Línea vertical */}
-  <div class="absolute left-0 top-8 bottom-0 w-0.5 bg-gray-300 dark:bg-gray-700"></div>
+  <div class="absolute left-0 top-8 bottom-0 w-0.5 bg-gray-300 dark:bg-gray-600"></div>
 
   {/* Punto indicador */}
   <div
-    class={`absolute left-[-8px] top-2 w-4 h-4 rounded-full border-2 border-primary ${isLatest ? "bg-blue-400" : "bg-primary"}`}
+    class={`absolute left-[-8px] top-2 w-4 h-4 rounded-full border-2 ${isLatest ? "bg-blue-400" : "dark:bg-blue-500"} dark:border-gray-600`}
   >
   </div>
 
@@ -45,7 +37,7 @@ const {
       <div class="flex flex-wrap gap-2 mt-auto">
         {
           technologies.map((tech) => (
-            <span class="px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full">
+            <span class="px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-600 text-gray-800 dark:text-gray-200 rounded-full">
               {tech}
             </span>
           ))

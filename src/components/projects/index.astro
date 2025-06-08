@@ -1,32 +1,15 @@
 ---
 import Card from "./card.astro";
-
-const projects = [
-  {
-    title: "Aquifiestas",
-    description: "Pagina web para alquiler de fiestas, con sistema inventario",
-    image: "/images/alquifiestas/landing_page.webp",
-    demo: "https://alquifiestas-demo.vercel.app/en",
-    tecnologies: ["Nextjs", "TailwindCSS", "TypeScript"]
-  },
-  {
-    title: "Tiendita",
-    description: "Sistema de inventario para una tienda de abarrotes",
-    image: "/images/tiendita/shopping_cart.webp",
-    demo: "https://github.com/SevenPok/Tienda",
-    tecnologies: ["Java"],
-    githubUrl: "https://github.com/SevenPok/Tienda"
-  }
-];
+import projects from "./data.json";
 ---
 
 <section class="flex flex-col items-center scroll-mt-20 mt-20" id="projects">
   <div class="max-w-4xl">
     <div class="flex flex-col items-center text-center">
-      <h1 class="text-4xl font-extrabold leading-tight font-display">Mis Proyectos</h1>
-      <p class="text-muted-foreground max-w-2xl mt-4 text-balance">
-        Aquí encontrarás una selección de mis proyectos más destacados. Cada proyecto representa diferentes habilidades
-        y tecnologías que he dominado a lo largo de mi carrera.
+      <h1 class="text-4xl font-extrabold leading-tight font-display">Proyectos en los que he trabajado</h1>
+      <p class="text-muted-foreground mt-4 text-balance">
+        Aquí encontrarás una selección de proyectos personales y colaborativos en los que he contribuido. Cada uno
+        demuestra habilidades, tecnologías y experiencias adquiridas a lo largo de mi carrera como desarrollador.
       </p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">

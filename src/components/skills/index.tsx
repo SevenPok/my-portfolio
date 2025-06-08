@@ -1,4 +1,3 @@
-import React from "react";
 import { FaJs, FaNode, FaReact } from "react-icons/fa6";
 import { RiNextjsFill } from "react-icons/ri";
 import { SiAstro, SiNestjs, SiPython, SiTypescript } from "react-icons/si";

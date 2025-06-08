@@ -1,0 +1,56 @@
+[
+  {
+    "name": "JavaScript",
+    "icon": "javascript",
+    "percent": 85,
+    "color": "#ffcf49"
+  },
+  {
+    "name": "React",
+    "icon": "react",
+    "percent": 90,
+    "color": "#61DAFB"
+  },
+  {
+    "name": "Node.js",
+    "icon": "nodejs",
+    "percent": 80,
+    "color": "#8CC84B"
+  },
+  {
+    "name": "TypeScript",
+    "icon": "typescript",
+    "percent": 88,
+    "color": "#3178C6"
+  },
+  {
+    "name": "Next.js",
+    "icon": "nextjs",
+    "percent": 90,
+    "color": "#0d1113"
+  },
+  {
+    "name": "NestJS",
+    "icon": "nestjs",
+    "percent": 75,
+    "color": "#E0234E"
+  },
+  {
+    "name": "C#",
+    "icon": "csharp",
+    "percent": 70,
+    "color": "#68217A"
+  },
+  {
+    "name": "Astro",
+    "icon": "astro",
+    "percent": 40,
+    "color": "#0d1113"
+  },
+  {
+    "name": "Python",
+    "icon": "python",
+    "percent": 60,
+    "color": "#3776AB"
+  }
+]
