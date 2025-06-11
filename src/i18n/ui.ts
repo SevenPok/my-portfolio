@@ -28,14 +28,29 @@ export const ui = {
         title: "Download CV of Gerber Colindres",
         filename: "gerber-colindres-cv-en.pdf",
       },
+      github: {
+        title: "Go to @sevenpok's GitHub",
+      },
+      linkedin: {
+        title: "Go to @gerber-colindres's LinkedIn",
+      },
     },
     skills: {
       title: "Skills and Technologies",
+      description:
+        "Here is a list of the technologies and skills I have acquired throughout my career. Each one represents a step in my journey as a developer. I am excited to continue learning and growing in the future.",
+      level: "Experience Level",
     },
     projects: {
       title: "Projects I've Worked On",
       description:
         "Here you will find a selection of personal and collaborative projects I have contributed to. Each one showcases the skills, technologies, and experiences I have acquired throughout my career as a developer.",
+      demo: "View Demo",
+    },
+    experience: {
+      title: "Professional Experience",
+      description:
+        "Throughout my career, I have had the opportunity to work on a variety of projects ranging from web applications to enterprise management systems. Here is a summary of my work experience:",
     },
   },
   es: {
@@ -60,14 +75,29 @@ export const ui = {
         title: "Descargar CV de Gerber Colindres",
         filename: "gerber-colindres-cv-es.pdf",
       },
+      github: {
+        title: "Ir a GitHub de @sevenpok",
+      },
+      linkedin: {
+        title: "Ir a LinkedIn de @gerber-colindres",
+      },
     },
     skills: {
       title: "Habilidades y Tecnologías",
+      description:
+        "Aquí hay una lista de las tecnologías y habilidades que he adquirido a lo largo de mi carrera. Cada una de ellas representa un paso en mi viaje como desarrollador. Estoy emocionado por seguir aprendiendo y creciendo en el futuro.",
+      level: "Nivel de Experiencia",
     },
     projects: {
       title: "Proyectos en los que he trabajado",
       description:
         "Aquí encontrarás una selección de proyectos personales y colaborativos en los que he contribuido. Cada uno demuestra habilidades, tecnologías y experiencias adquiridas a lo largo de mi carrera como desarrollador.",
+      demo: "Ver Demo",
+    },
+    experience: {
+      title: "Experiencia Profesional",
+      description:
+        "A lo largo de mi carrera, he tenido la oportunidad de trabajar en una variedad de proyectos que abarcan desde aplicaciones web hasta sistemas de gestión empresarial. Aquí hay un resumen de mi experiencia laboral:",
     },
   },
 } as const;

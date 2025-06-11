@@ -61,18 +61,14 @@ const skills = [
   },
 ];
 
-export const Skills = () => {
+export const Skills = ({ title, description }: { title: string; description: string }) => {
   return (
     <section className="flex flex-col items-center mt-15 scroll-mt-20" id="skills">
-      <h1 className="text-4xl font-extrabold leading-tight font-display text-center">Habilidades y Tecnologías</h1>
-      <p className="text-muted-foreground text-center mb-10 mt-4 text-balance">
-        Aquí hay una lista de las tecnologías y habilidades que he adquirido a lo largo de mi carrera. Cada una de ellas
-        representa un paso en mi viaje como desarrollador. Estoy emocionado por seguir aprendiendo y creciendo en el
-        futuro.
-      </p>
+      <h1 className="text-4xl font-extrabold leading-tight font-display text-center">{title}</h1>
+      <p className="text-muted-foreground text-center mb-10 mt-4 text-balance">{description}</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-4xl">
         {skills.map((skill) => (
-          <Card key={skill.name} name={skill.name} icon={skill.icon} percent={skill.percent} color={skill.color} />
+          <Card key={skill.name} {...skill} />
         ))}
       </div>
     </section>

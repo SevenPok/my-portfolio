@@ -1,6 +1,10 @@
 ---
 import { Image } from "astro:assets";
 import Sprite from "@/assets/sprite.svg?url";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 interface Props {
   title: string;
@@ -37,7 +41,7 @@ const card = Astro.props;
         target="_blank"
         class="inline-flex items-center px-4 py-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 group/btn"
       >
-        Ver demo
+        {t("projects.demo")}
       </a>
       {
         card.githubUrl && (
