@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Microsoft Dynamics 365 Developer",
+    "company": "Intelibis",
+    "period": "March 2024 - Present",
+    "description": "Development and customization of solutions in Microsoft Dynamics 365. Implementation of workflows and automations to improve operational efficiency. Integration of Dynamics 365 with other platforms and services.",
+    "technologies": ["C#", "JavaScript", "Power Platform", "SQL Server"],
+    "isLatest": true,
+    "isLast": false
+  },
+  {
+    "title": "Junior Frontend Developer",
+    "company": "Recurso Humano Externo",
+    "period": "July 2022 - January 2024",
+    "description": "Development of a payroll and human resources management application. Implementation of features for employee management, payroll, and reporting. Collaboration in the design of the user interface and user experience.",
+    "technologies": ["React", "Next.js", "Material UI", "TypeScript", "NestJS", "MongoDB", "MySQL"],
+    "isLatest": false,
+    "isLast": true
+  }
+]

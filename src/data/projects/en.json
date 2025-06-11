@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Aquifiestas",
+    "description": "Website for party rentals, featuring an inventory system.",
+    "image": "/images/alquifiestas/landing_page.webp",
+    "demo": "https://alquifiestas-demo.vercel.app/en",
+    "tecnologies": ["Next.js", "TailwindCSS", "TypeScript"]
+  },
+  {
+    "title": "Department of Mathematics",
+    "description": "Website for the Department of Mathematics at the University of San Carlos of Guatemala.",
+    "image": "/images/dept_matematica/landing_page.png",
+    "demo": "https://mate.ingenieria.usac.edu.gt/",
+    "tecnologies": ["Next.js", "Bootstrap", "Node.js", "Express", "MySQL"]
+  },
+  {
+    "title": "Tiendita",
+    "description": "Inventory system for a grocery store.",
+    "image": "/images/tiendita/shopping_cart.webp",
+    "demo": "https://github.com/SevenPok/Tienda",
+    "tecnologies": ["Java"],
+    "githubUrl": "https://github.com/SevenPok/Tienda"
+  }
+]

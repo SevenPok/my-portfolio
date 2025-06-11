@@ -2,10 +2,12 @@
 import Footer from "@/components/footer/index.astro";
 import Navbar from "@/components/navbar/index.astro";
 import "@/styles/global.css";
+
+const { currentLocate } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es" class="scroll-smooth">
+<html lang={currentLocate} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,6 +17,28 @@ import "@/styles/global.css";
     <meta name="author" content="Gerber Colindres" />
     <meta name="keywords" content="Gerber Colindres, portfolio, developer, software engineer" />
     <title>Gerber Colindres</title>
+    <script is:inline>
+      (function () {
+        function getTheme() {
+          if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+            return localStorage.getItem("theme");
+          }
+          if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            return "dark";
+          }
+          return "light";
+        }
+
+        const theme = getTheme();
+        const root = document.documentElement;
+
+        if (theme === "dark") {
+          root.classList.add("dark");
+        } else {
+          root.classList.remove("dark");
+        }
+      })();
+    </script>
   </head>
   <body class="dark:bg-gray-900 dark:text-white bg-light text-black">
     <Navbar />

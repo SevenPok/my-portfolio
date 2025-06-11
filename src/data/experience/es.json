@@ -10,7 +10,7 @@
   },
   {
     "title": "Fronted Developer Jr",
-    "company": "Rcurso Humano Externo",
+    "company": "Recurso Humano Externo",
     "period": "Julio 2022 - Enero 2024",
     "description": "Desarrollo de una aplicacion de gestion de planillas y recursos humanos. Implementación de funcionalidades para la gestión de empleados, nómina y reportes. Colaboración en el diseño de la interfaz de usuario y experiencia del usuario.",
     "technologies": ["React", "Next.js", "Material UI", "TypeScript", "NestJS", "MongoDB", "MySQL"],

@@ -1,11 +1,16 @@
 ---
+import ToggleLanguage from "./toggle-language.astro";
 import ToggleTheme from "./ToggleTheme.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const menuItems = [
-  { name: "Acerca de mi", id: "about" },
-  { name: "Habilidades", id: "skills" },
-  { name: "Proyectos", id: "projects" },
-  { name: "Experiencia", id: "experience" }
+  { name: t("navbar.about"), id: "about" },
+  { name: t("navbar.skills"), id: "skills" },
+  { name: t("navbar.projects"), id: "projects" },
+  { name: t("navbar.experience"), id: "experience" },
 ];
 ---
 
@@ -30,7 +35,8 @@ const menuItems = [
     </div>
 
     <!-- Menu mobil -->
-    <div class="flex items-center">
+    <div class="flex items-center space-x-1">
+      <ToggleLanguage />
       <ToggleTheme />
       <!-- Botón móvil -->
       <button

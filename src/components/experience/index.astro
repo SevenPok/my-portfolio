@@ -1,6 +1,14 @@
 ---
 import ExperienceCard from "./card.astro";
-import experiences from "./data.json";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Importa el archivo de experiencias correspondiente al idioma
+let experiences;
+if (lang === "es") experiences = (await import("@/data/experience/es.json")).default;
+else experiences = (await import("@/data/experience/en.json")).default;
 ---
 
 <section class="flex flex-col items-center scroll-mt-20 mt-20" id="experience">
@@ -12,19 +20,7 @@ import experiences from "./data.json";
     </p>
 
     <div class="mt-10">
-      {
-        experiences.map((exp) => (
-          <ExperienceCard
-            title={exp.title}
-            company={exp.company}
-            period={exp.period}
-            description={exp.description}
-            technologies={exp.technologies}
-            isLatest={exp.isLatest}
-            isLast={exp.isLast}
-          />
-        ))
-      }
+      {experiences.map((exp) => <ExperienceCard {...exp} />)}
     </div>
   </div>
 </section>

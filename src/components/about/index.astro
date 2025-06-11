@@ -1,6 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import Sprite from "@/assets/sprite.svg?url";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="about" class="flex flex-col justify-center items-center scroll-mt-24">
@@ -73,11 +76,11 @@ import Sprite from "@/assets/sprite.svg?url";
       <!-- CV -->
       <a
         class="bg-white rounded-full p-2 transition-all duration-300 transform hover:scale-110 shadow-lg"
-        href="documents/gerber-colindres-cv.pdf"
+        href={t("about.cv.url")}
         target="_blank"
-        download="gerber-colindres.pdf"
-        aria-label="CV"
-        title="Descargar CV de Gerber Colindres"
+        download={t("about.cv.filename")}
+        aria-label="Download CV"
+        title={t("about.cv.title")}
       >
         <svg class="size-9" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
           ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
@@ -100,38 +103,31 @@ import Sprite from "@/assets/sprite.svg?url";
         >
       </a>
     </div>
-    <p class="text-center mt-4 text-balance">
-      ¡Hola! Soy <strong class="text-blue-600 dark:text-blue-400">Gerber Colindres</strong>, desarrollador de software
-      guatemalteco con más de
-      <span class="font-semibold dark:text-gray-200">tres años</span>
-      de experiencia profesional. Mi pasión es crear soluciones tecnológicas
-      <span class="italic text-gray-700 dark:text-gray-400">eficientes e innovadoras</span>
-      que impacten positivamente.
-    </p>
+    <p class="text-center mt-4 text-balance" set:html={t("about.description")} />
   </div>
+
+  <style>
+    .flip-container {
+      perspective: 1000px;
+    }
+
+    .flip-inner {
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .group:hover .flip-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-front,
+    .flip-back {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+
+    .flip-back {
+      transform: rotateY(180deg);
+    }
+  </style>
 </section>
-
-<style>
-  .flip-container {
-    perspective: 1000px;
-  }
-
-  .flip-inner {
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-
-  .group:hover .flip-inner {
-    transform: rotateY(180deg);
-  }
-
-  .flip-front,
-  .flip-back {
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-  }
-
-  .flip-back {
-    transform: rotateY(180deg);
-  }
-</style>
