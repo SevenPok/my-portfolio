@@ -16,7 +16,7 @@ export default defineConfig({
     service: passthroughImageService(),
   },
   i18n: {
-    defaultLocale: "es",
+    defaultLocale: "en",
     locales: ["es", "en"],
     routing: {
       prefixDefaultLocale: true,

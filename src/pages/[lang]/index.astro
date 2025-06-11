@@ -12,8 +12,6 @@ const t = useTranslations(lang);
 export function getStaticPaths() {
   return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
 }
-
-export const defaultRedirect = "/es";
 ---
 
 <Layout lang={lang}>

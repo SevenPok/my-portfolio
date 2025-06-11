@@ -52,6 +52,11 @@ export const ui = {
       description:
         "Throughout my career, I have had the opportunity to work on a variety of projects ranging from web applications to enterprise management systems. Here is a summary of my work experience:",
     },
+    404: {
+      title: "Page Not Found",
+      description: "The page you are looking for does not exist.",
+      back: "Go Back",
+    },
   },
   es: {
     navbar: {
@@ -98,6 +103,11 @@ export const ui = {
       title: "Experiencia Profesional",
       description:
         "A lo largo de mi carrera, he tenido la oportunidad de trabajar en una variedad de proyectos que abarcan desde aplicaciones web hasta sistemas de gestión empresarial. Aquí hay un resumen de mi experiencia laboral:",
+    },
+    404: {
+      title: "Página No Encontrada",
+      description: "La página que buscas no existe.",
+      back: "Regresar",
     },
   },
 } as const;
