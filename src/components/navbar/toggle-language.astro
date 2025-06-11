@@ -63,7 +63,7 @@ const lang = getLangFromUrl(Astro.url);
     const menu = document.getElementById("language-menu");
 
     button?.addEventListener("click", (e) => {
-      e.stopPropagation(); // Prevent click from closing immediately
+      e.stopPropagation();
       const isExpanded = button?.getAttribute("aria-expanded") === "true";
       button?.setAttribute("aria-expanded", (!isExpanded).toString());
 
@@ -74,16 +74,22 @@ const lang = getLangFromUrl(Astro.url);
       menu?.classList.toggle("pointer-events-none", isExpanded);
     });
 
-    // Handle language links to preserve hash
+    // Handle language links to preserve current path
     const languageLinks = document.querySelectorAll(".language-link");
     languageLinks.forEach((link) => {
       link.addEventListener("click", (e) => {
         e.preventDefault();
         const targetLang = link.getAttribute("data-lang");
+        const currentPath = window.location.pathname;
         const currentHash = window.location.hash;
 
-        // Navigate to the new language URL with the current hash
-        window.location.href = `/${targetLang}${currentHash}`;
+        // Remove current language prefix from path
+        const pathWithoutLang = currentPath.replace(/^\/(en|es)/, "") || "/";
+
+        // Build new URL with target language
+        const newPath = `/${targetLang}${pathWithoutLang === "/" ? "" : pathWithoutLang}`;
+
+        window.location.href = `${newPath}${currentHash}`;
       });
     });
 
