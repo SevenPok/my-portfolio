@@ -61,14 +61,14 @@ const skills = [
   },
 ];
 
-export const Skills = ({ title, description }: { title: string; description: string }) => {
+export const Skills = ({ title, description, level }: { title: string; description: string; level: string }) => {
   return (
     <section className="flex flex-col items-center mt-15 scroll-mt-20" id="skills">
       <h1 className="text-4xl font-extrabold leading-tight font-display text-center">{title}</h1>
       <p className="text-muted-foreground text-center mb-10 mt-4 text-balance">{description}</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-4xl">
         {skills.map((skill) => (
-          <Card key={skill.name} {...skill} />
+          <Card key={skill.name} {...skill} level={level} />
         ))}
       </div>
     </section>
