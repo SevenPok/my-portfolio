@@ -3,6 +3,8 @@ import { RiNextjsFill } from "react-icons/ri";
 import { SiAstro, SiNestjs, SiPython, SiTypescript } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 import Card from "./card";
+import type { Lang } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
 
 const skills = [
   {
@@ -61,14 +63,16 @@ const skills = [
   },
 ];
 
-export const Skills = ({ title, description, level }: { title: string; description: string; level: string }) => {
+export const Skills = ({ lang }: { lang: Lang }) => {
+  const t = useTranslations(lang);
+
   return (
     <section className="flex flex-col items-center mt-15 scroll-mt-20" id="skills">
-      <h1 className="text-4xl font-extrabold leading-tight font-display text-center">{title}</h1>
-      <p className="text-muted-foreground text-center mb-10 mt-4 text-balance">{description}</p>
+      <h1 className="text-4xl font-extrabold leading-tight font-display text-center">{t("skills.title")}</h1>
+      <p className="text-muted-foreground text-center mb-10 mt-4 text-balance">{t("skills.description")}</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-4xl">
         {skills.map((skill) => (
-          <Card key={skill.name} {...skill} level={level} />
+          <Card key={skill.name} {...skill} level={t("skills.level")} />
         ))}
       </div>
     </section>

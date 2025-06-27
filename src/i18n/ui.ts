@@ -13,6 +13,7 @@ export const ui = {
       skills: "Skills",
       projects: "Projects",
       experience: "Experience",
+      contact: "Contact",
     },
     footer: {
       rights: `© ${new Date().getFullYear()} Gerber Colindres. All rights reserved.`,
@@ -52,6 +53,24 @@ export const ui = {
       description:
         "Throughout my career, I have had the opportunity to work on a variety of projects ranging from web applications to enterprise management systems. Here is a summary of my work experience:",
     },
+    contact: {
+      title: "Contact Me",
+      description: "If you would like to get in touch with me, feel free to do so through the following form:",
+      form: {
+        email: "Email",
+        name: "Full Name",
+        message: "Message",
+        send: "Send Message",
+        success: "Message sent successfully!",
+        error: "An error occurred while sending the message.",
+        captchaError: "Please complete the reCAPTCHA before submitting the form.",
+        placeholder: {
+          name: "Enter your name",
+          email: "Enter your email",
+          message: "Enter your message",
+        },
+      },
+    },
     404: {
       title: "Page Not Found",
       description: "The page you are looking for does not exist.",
@@ -64,6 +83,7 @@ export const ui = {
       skills: "Habilidades",
       projects: "Proyectos",
       experience: "Experiencia",
+      contact: "Contacto",
     },
     footer: {
       rights: `© ${new Date().getFullYear()} Gerber Colindres. Todos los derechos reservados.`,
@@ -103,6 +123,24 @@ export const ui = {
       title: "Experiencia Profesional",
       description:
         "A lo largo de mi carrera, he tenido la oportunidad de trabajar en una variedad de proyectos que abarcan desde aplicaciones web hasta sistemas de gestión empresarial. Aquí hay un resumen de mi experiencia laboral:",
+    },
+    contact: {
+      title: "Contáctame",
+      description: "Si deseas ponerte en contacto conmigo, no dudes en hacerlo a través del siguiente formulario:",
+      form: {
+        email: "Correo Electrónico",
+        name: "Nombre Completo",
+        message: "Mensaje",
+        send: "Enviar Mensaje",
+        success: "¡Mensaje enviado con éxito!",
+        error: "Ocurrió un error al enviar el mensaje.",
+        captchaError: "Por favor, completa el reCAPTCHA antes de enviar el formulario.",
+        placeholder: {
+          name: "Ingresa tu nombre",
+          email: "Ingresa tu correo electrónico",
+          message: "Ingresa tu mensaje",
+        },
+      },
     },
     404: {
       title: "Página No Encontrada",

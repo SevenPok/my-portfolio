@@ -5,6 +5,9 @@ import About from "@/components/about/index.astro";
 import Experience from "@/components/experience/index.astro";
 import Layout from "@/layouts/Layout.astro";
 import Projects from "@/components/projects/index.astro";
+import Contact from "@/components/contact";
+import { ReCaptcha } from "@/components/ui/recaptcha";
+import { Toaster } from "@/components/ui/sonner";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -17,8 +20,10 @@ export function getStaticPaths() {
 <Layout lang={lang}>
   <div class="max-w-7xl mx-auto py-24 px-6">
     <About />
-    <Skills client:load title={t("skills.title")} description={t("skills.description")} level={t("skills.level")} />
+    <Skills lang={lang} client:load />
     <Projects />
     <Experience />
+    <Contact lang={lang} client:load><ReCaptcha client:only="react" /></Contact>
+    <Toaster client:load />
   </div>
 </Layout>

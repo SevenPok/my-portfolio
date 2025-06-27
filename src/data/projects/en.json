@@ -9,7 +9,7 @@
   {
     "title": "Department of Mathematics",
     "description": "Website for the Department of Mathematics at the University of San Carlos of Guatemala.",
-    "image": "/images/dept_matematica/landing_page.png",
+    "image": "/images/dept_matematica/landing_page.webp",
     "demo": "https://mate.ingenieria.usac.edu.gt/",
     "tecnologies": ["Next.js", "Bootstrap", "Node.js", "Express", "MySQL"]
   },
