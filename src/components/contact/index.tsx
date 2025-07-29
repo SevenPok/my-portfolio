@@ -84,7 +84,7 @@ const Contact: FC<IProps> = ({ lang, children }) => {
         <h1 className="text-4xl font-extrabold leading-tight font-display text-center">{t("contact.title")}</h1>
         <p className="text-muted-foreground text-center mb-10 mt-4 text-balance">{t("contact.description")}</p>
 
-        <Card className="min-w-3xl">
+        <Card>
           <CardContent>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6">

@@ -1,16 +1,15 @@
 ---
-import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { getLangFromUrl } from "@/i18n/utils";
+import { ReCaptcha } from "@/components/ui/recaptcha";
 import { Skills } from "@/components/skills";
-import About from "@/components/about/index.astro";
+import { Toaster } from "@/components/ui/sonner";
+import About from "@/components/home/about.astro";
+import Contact from "@/components/contact";
 import Experience from "@/components/experience/index.astro";
 import Layout from "@/layouts/Layout.astro";
-import Projects from "@/components/projects/index.astro";
-import Contact from "@/components/contact";
-import { ReCaptcha } from "@/components/ui/recaptcha";
-import { Toaster } from "@/components/ui/sonner";
+import Projects from "@/components/home/projects.astro";
 
 const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 
 export function getStaticPaths() {
   return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
@@ -24,6 +23,6 @@ export function getStaticPaths() {
     <Projects />
     <Experience />
     <Contact lang={lang} client:load><ReCaptcha client:only="react" /></Contact>
-    <Toaster client:load />
   </div>
+  <Toaster client:load />
 </Layout>

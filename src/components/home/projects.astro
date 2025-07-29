@@ -1,0 +1,77 @@
+---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Image } from "astro:assets";
+import Sprite from "@/assets/sprite.svg?url";
+import { Button } from "@/components/ui/button";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Importa el archivo de proyectos correspondiente al idioma
+let projects;
+if (lang === "es") projects = (await import("@/data/projects/es.json")).default;
+else projects = (await import("@/data/projects/en.json")).default;
+---
+
+<section class="flex flex-col items-center scroll-mt-20 mt-20" id="projects">
+  <div class="max-w-4xl">
+    <div class="flex flex-col items-center text-center">
+      <h1 class="text-4xl font-extrabold leading-tight font-display">
+        {t("projects.title")}
+      </h1>
+      <p class="text-muted-foreground mt-4 text-balance">
+        {t("projects.description")}
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+      {
+        projects.map((p) => (
+          <Card className="px-0 pt-0 overflow-hidden shadow-xl transition-transform transform duration-300 hover:scale-105">
+            <Image
+              class="w-full h-64 object-cover"
+              src={p.image}
+              alt={p.title}
+              width={300}
+              height={300}
+              loading="lazy"
+            />
+            <CardContent>
+              <h2 class="text-2xl font-bold text-gray-900 dark:text-white">{p.title}</h2>
+              <p class="text-gray-700 dark:text-gray-300 mt-2">{p.description}</p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                {p.tecnologies.map((tech) => (
+                  <span class="text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-2 py-1 rounded-full">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </CardContent>
+            <CardFooter>
+              <div class="flex gap-4">
+                <Button className="rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/25 group/btn">
+                  <a href={p.demo} target="_blank" class="font-semibold">
+                    {t("projects.demo")}
+                  </a>
+                </Button>
+                {p.githubUrl && (
+                  <Button
+                    className="rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/25 group/btn"
+                    color="gray"
+                  >
+                    <a href={p.githubUrl} target="_blank" class="font-semibold flex items-center gap-2">
+                      <svg fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                        <use xlink:href={Sprite + "#github"} />
+                      </svg>
+                      GitHub
+                    </a>
+                  </Button>
+                )}
+              </div>
+            </CardFooter>
+          </Card>
+        ))
+      }
+    </div>
+  </div>
+</section>
