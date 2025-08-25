@@ -6,8 +6,8 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section id="about" class="flex flex-col justify-center items-center scroll-mt-24">
-  <div class="flex flex-col justify-center items-center max-w-4xl">
+<section id="about" class="flex flex-col justify-center items-center scroll-mt-24 px-4">
+  <div class="flex flex-col justify-center items-center max-w-4xl w-full">
     <div class="flip-container group relative size-56 md:size-64 lg:size-72 mb-4 rounded-full cursor-pointer">
       <div class="flip-inner w-full h-full relative rounded-full">
         <!-- Imagen frontal -->
@@ -48,59 +48,56 @@ const t = useTranslations(lang);
       </svg>
     </span>
     <h1 class="text-4xl font-extrabold leading-tight font-display mt-2">Gerber Colindres</h1>
-    <div class="flex flex-row items-center text-center gap-4 mt-4">
+    <div class="flex flex-col sm:flex-row items-center text-center gap-4 mt-4 w-full sm:w-auto">
       <!-- Github -->
       <a
-        class="bg-zinc-900 dark:bg-zinc-950 rounded-full p-2 transition-all duration-300 transform hover:scale-110 shadow-lg"
+        class="flex items-center justify-center gap-2 w-full sm:w-auto bg-zinc-900 dark:bg-zinc-950 rounded-full px-4 py-2 transition-all duration-300 transform hover:scale-105 shadow-lg border border-zinc-700 hover:bg-zinc-800 text-white font-semibold text-base"
         href="https://github.com/sevenpok"
         target="_blank"
         aria-label="GitHub"
         title={t("about.github.title")}
       >
-        <svg class="size-9">
+        <svg class="w-5 h-5" fill="currentColor">
           <use xlink:href={Sprite + "#github"}></use>
         </svg>
+        <span>GitHub</span>
       </a>
-      <!-- Linkendn -->
+      <!-- LinkedIn -->
       <a
-        class="bg-white rounded-full p-3 transition-all duration-300 transform hover:scale-110 shadow-lg"
+        class="flex items-center justify-center gap-2 w-full sm:w-auto bg-white dark:bg-[#1d263a] rounded-full px-4 py-2 transition-all duration-300 transform hover:scale-105 shadow-lg border border-blue-200 dark:border-blue-900 hover:bg-blue-50 dark:hover:bg-[#22305a] text-blue-700 dark:text-blue-300 font-semibold text-base"
         href="https://linkedin.com/in/gerber-colindres"
         target="_blank"
         aria-label="LinkedIn"
         title={t("about.linkedin.title")}
       >
-        <svg class="size-7">
+        <svg class="w-5 h-5" fill="currentColor">
           <use xlink:href={Sprite + "#linkedin"}></use>
         </svg>
+        <span>LinkedIn</span>
       </a>
       <!-- CV -->
       <a
-        class="bg-white rounded-full p-2 transition-all duration-300 transform hover:scale-110 shadow-lg"
+        class="flex items-center justify-center gap-2 w-full sm:w-auto bg-white dark:bg-[#172032] rounded-full px-4 py-2 transition-all duration-300 transform hover:scale-105 shadow-lg border border-sky-200 dark:border-sky-900 hover:bg-sky-50 dark:hover:bg-[#1a253a] text-sky-700 dark:text-sky-300 font-semibold text-base"
         href={t("about.cv.url")}
         target="_blank"
-        download={t("about.cv.filename")}
-        aria-label="Download CV"
+        rel="noopener noreferrer"
         title={t("about.cv.title")}
       >
-        <svg class="size-9" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-          ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
-            id="SVGRepo_tracerCarrier"
-            stroke-linecap="round"
-            stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
-            <path
-              d="M12 3V16M12 16L16 11.625M12 16L8 11.625"
-              stroke="#1C274C"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-            <path
-              d="M15 21H9C6.17157 21 4.75736 21 3.87868 20.1213C3 19.2426 3 17.8284 3 15M21 15C21 17.8284 21 19.2426 20.1213 20.1213C19.8215 20.4211 19.4594 20.6186 19 20.7487"
-              stroke="#1C274C"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-          </g></svg
+        <svg
+          class="w-5 h-5 text-sky-500 dark:text-sky-300"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
         >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.828a2 2 0 0 0-.586-1.414l-4.828-4.828A2 2 0 0 0 14.172 2H6zm7 1.414V8a1 1 0 0 0 1 1h4.586L13 3.414z"
+          ></path>
+        </svg>
+        <span>{lang === "es" ? "Ver CV" : "View CV"}</span>
       </a>
     </div>
     <p class="text-center mt-4 text-balance" set:html={t("about.description")} />

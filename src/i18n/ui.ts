@@ -25,7 +25,7 @@ export const ui = {
       <span class="italic text-gray-700 dark:text-gray-400">efficient and innovative</span>
       technological solutions that make a positive impact.`,
       cv: {
-        url: "/documents/gerber-colindres-cv-en.pdf",
+        url: "https://drive.google.com/file/d/1bP_OU2bMMBn88n49ApBLsJ3BIZWohkJ9/view?usp=sharing",
         title: "Download CV of Gerber Colindres",
         filename: "gerber-colindres-cv-en.pdf",
       },
@@ -96,7 +96,7 @@ export const ui = {
       <span class="italic text-gray-700 dark:text-gray-400">eficientes e innovadoras</span>
       que impacten positivamente.`,
       cv: {
-        url: "/documents/gerber-colindres-cv.pdf",
+        url: "https://drive.google.com/file/d/1LEeAvxNm2kjzw9usyLQGfQ0KKH8Gp4lu/view?usp=sharing",
         title: "Descargar CV de Gerber Colindres",
         filename: "gerber-colindres-cv-es.pdf",
       },
